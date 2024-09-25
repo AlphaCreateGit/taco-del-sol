@@ -124,30 +124,21 @@ function animationText() {
       wordsClass: "words",
     });
 
-    // List of predefined colors
     const colors = ["#feb503", "#ee2400", "#108a00"];
 
-    // Variable to keep track of the last used color index
     let lastColorIndex = -1;
 
-    // Create a timeline for the animation
-    const tl = gsap.timeline();
-
-    // Animate the words with random colors from the list
-    tl.set(
+    gsap.set(
       split.words,
       {
         color: function () {
           let newColorIndex;
-          // Ensure that the new color index is different from the last one
           do {
             newColorIndex = Math.floor(Math.random() * colors.length);
           } while (newColorIndex === lastColorIndex);
 
-          // Update the last color index
           lastColorIndex = newColorIndex;
 
-          // Return the new color
           return colors[newColorIndex];
         },
       },
