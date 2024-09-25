@@ -150,7 +150,6 @@ function animationText() {
           // Return the new color
           return colors[newColorIndex];
         },
-        stagger: 0.1,
       },
       0.1
     );
