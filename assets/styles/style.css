@@ -36,6 +36,9 @@ ul li {
 a {
   text-decoration: none;
 }
+a:hover {
+  cursor: none;
+}
 input,
 select,
 textarea {
@@ -53,6 +56,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
+  cursor: none;
 }
 /* set minxin */
 .h1-font {
@@ -89,7 +93,7 @@ body {
 
 /* start css heaeder */
 .header {
-  z-index: 999;
+  z-index: 99;
 }
 .header__container {
   padding-inline: 24px;
@@ -163,6 +167,27 @@ body {
   text-transform: uppercase;
 }
 /* end cta group */
+/* css cursor magic */
+.cursor-magic {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, 50%); */
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 100;
+  background-image: url("../images/ic_hand_default.svg");
+  background-size: 100% 100%;
+  transition: background-image 0.2s;
+}
+.cursor-magic.--active {
+  background-image: url("../images/ic_hand_active.svg");
+}
+/* end cursor magic */
 /* css banner */
 .hero-banner__container {
   width: 100%;

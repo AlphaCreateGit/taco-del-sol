@@ -4,6 +4,7 @@ $(document).ready(function () {
   language();
   header();
   animationText();
+  magicCursor();
 });
 
 function header() {
@@ -144,5 +145,21 @@ function animationText() {
       },
       0.1
     );
+  });
+}
+
+function magicCursor() {
+  $(document).on("mousemove", function (e) {
+    $(".cursor-magic").css({
+      top: e.pageY - 10 + "px",
+      left: e.pageX - 10 + "px",
+    });
+  });
+  $("body a").mouseenter(function () {
+    $(".cursor-magic").addClass("--active");
+  });
+
+  $("body a").mouseleave(function () {
+    $(".cursor-magic").removeClass("--active");
   });
 }
