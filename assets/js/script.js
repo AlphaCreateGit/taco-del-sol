@@ -5,6 +5,7 @@ $(document).ready(function () {
   header();
   animationText();
   magicCursor();
+  eventSwiper();
 });
 
 function header() {
@@ -119,7 +120,7 @@ function language() {
 function animationText() {
   gsap.registerPlugin(SplitType);
 
-  $(".introduce__title h1").each(function (index, element) {
+  $(".text-random h1").each(function (index, element) {
     const split = new SplitType(element, {
       type: "words",
       wordsClass: "words",
@@ -174,4 +175,16 @@ function magicCursor() {
       $(".cursor-magic").removeClass("--active");
     }
   );
+}
+function eventSwiper() {
+  if ($(".events-sec").length) {
+    const swiperOffer = new Swiper(".swiper-event", {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: ".events-sec .swiper-button-next",
+        prevEl: ".events-sec .swiper-button-prev",
+      },
+    });
+  }
 }

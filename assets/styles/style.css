@@ -60,6 +60,20 @@ body {
   cursor: none;
   overflow-x: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+}
 /* set minxin */
 .h1-font {
   font-family: var(--font-primary);
@@ -90,6 +104,9 @@ body {
   font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 20px;
+}
+.spacing {
+  height: 120px;
 }
 /* end set minxin */
 
@@ -261,3 +278,104 @@ body {
   height: 100%;
   object-fit: cover;
 }
+/* end style introduce */
+/* start style restaurant sec */
+
+.restaurant__title {
+  margin-bottom: 40px;
+}
+.restaurant__title h1 {
+  font-family: var(--font-primary);
+  font-size: 100px;
+  line-height: 110px;
+  text-align: center;
+}
+.restaurant__title h1 .line {
+  text-align: center !important;
+}
+.restaurant__box {
+  max-width: 700px;
+  width: 100%;
+}
+.restaurant__desc {
+  color: var(--color-fourth);
+}
+/* end style restaurant sec */
+
+/* start style events */
+.events__container {
+  padding-inline: 24px;
+}
+.events__list {
+  position: relative;
+}
+.events__list .swiper-arrows .swiper-button-next,
+.events__list .swiper-arrows .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  height: 32px;
+  width: 40px;
+}
+.events__list .swiper-arrows .swiper-button-next:hover,
+.events__list .swiper-arrows .swiper-button-prev:hover {
+  cursor: none;
+}
+.events__list .swiper-arrows .swiper-button-next {
+  right: 0;
+}
+.events__title {
+  margin-bottom: 32px;
+}
+.events__item {
+  position: relative;
+  mask-image: url("../images/img_bg.svg");
+  mask-size: 100% 100%;
+}
+.events__item::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 47.36%, #000 88.9%);
+}
+.events__content {
+  position: absolute;
+  inset: 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 2;
+}
+.events__img {
+  width: 100%;
+  aspect-ratio: 329 / 489;
+}
+.events__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.events__content .rank {
+  color: var(--color-white);
+}
+.events__content .detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.events__content .detail h3 {
+  color: var(--color-text);
+}
+.events__content .detail .desc {
+  color: var(--color-white);
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: unset;
+  font-size: 0;
+}
+/* end style events */
