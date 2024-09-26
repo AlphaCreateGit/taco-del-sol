@@ -300,6 +300,49 @@ h6,
 .restaurant__desc {
   color: var(--color-fourth);
 }
+.restaurant__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant__bottom .text-random h1 {
+  font-size: 150px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-style: italic;
+}
+.restaurant__bottom .text-random h1 .line {
+  text-align: center !important;
+}
+.restaurant__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant__btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 134px;
+  height: 134px;
+  background-color: var(--color-secondary);
+  mask-image: url("../images/img_bg_default.svg");
+  mask-size: 100% 100%;
+  background-image: url("../images/img_bg_default.svg");
+  background-size: 100% 100%;
+  color: var(--color-fourth);
+  transition: all 0.2s ease;
+}
+.restaurant__btn a:hover {
+  /* background-image: url("../images/img_bg_hover.svg");
+  mask-image: url("../images/img_bg_hover.svg"); */
+  background-color: var(--color-secondary);
+}
+.restaurant__btn a span {
+  transform: translateY(-6px);
+}
 /* end style restaurant sec */
 
 /* start style events */
@@ -315,6 +358,9 @@ h6,
   top: 50%;
   height: 32px;
   width: 40px;
+}
+.events__list .swiper-arrows .swiper-button-prev {
+  left: 0;
 }
 .events__list .swiper-arrows .swiper-button-next:hover,
 .events__list .swiper-arrows .swiper-button-prev:hover {
