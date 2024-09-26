@@ -155,11 +155,15 @@ function magicCursor() {
       left: e.pageX - 10 + "px",
     });
   });
-  $("body a").mouseenter(function () {
-    $(".cursor-magic").addClass("--active");
-  });
+  $("body a, .dropdown-custom__item,.dropdown-custom__text").mouseenter(
+    function () {
+      $(".cursor-magic").addClass("--active");
+    }
+  );
 
-  $("body a").mouseleave(function () {
-    $(".cursor-magic").removeClass("--active");
-  });
+  $("body a,.dropdown-custom__item,.dropdown-custom__text").mouseleave(
+    function () {
+      $(".cursor-magic").removeClass("--active");
+    }
+  );
 }

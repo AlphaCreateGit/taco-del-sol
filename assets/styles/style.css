@@ -57,6 +57,7 @@ body {
   font-size: 16px;
   line-height: 1;
   cursor: none;
+  overflow-x: hidden;
 }
 /* set minxin */
 .h1-font {
@@ -113,12 +114,20 @@ body {
 }
 .header__menu ul li a {
   color: var(--color-fourth);
+  transition: color 0.3s ease;
+}
+.header__menu ul li a:hover {
+  color: var(--color-secondary);
 }
 .header__right {
   gap: 24px;
 }
 .header__phone a {
   color: var(--color-third);
+  transition: color 0.3s ease;
+}
+.header__phone a:hover {
+  color: var(--color-secondary);
 }
 .header__lang {
   position: relative;
@@ -147,6 +156,7 @@ body {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 99;
 }
 .cta-group .cta__list {
   gap: 8px;
