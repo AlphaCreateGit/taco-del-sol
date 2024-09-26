@@ -119,28 +119,30 @@ function language() {
 function animationText() {
   gsap.registerPlugin(SplitType);
 
-  $(".introduce__container h1").each(function (index, element) {
+  $(".introduce__title h1").each(function (index, element) {
     const split = new SplitType(element, {
       type: "words",
       wordsClass: "words",
     });
 
     const colors = ["#feb503", "#ee2400", "#108a00"];
+    let availableColors = [...colors]; // Clone the color array
 
-    let lastColorIndex = -1;
+    // Function to get a random color ensuring all colors are used
+    function getRandomColor() {
+      if (availableColors.length === 0) {
+        availableColors = [...colors]; // Refill the available colors if all are used
+      }
+
+      const randomIndex = Math.floor(Math.random() * availableColors.length);
+      return availableColors.splice(randomIndex, 1)[0]; // Remove and return the random color
+    }
 
     gsap.set(
       split.words,
       {
         color: function () {
-          let newColorIndex;
-          do {
-            newColorIndex = Math.floor(Math.random() * colors.length);
-          } while (newColorIndex === lastColorIndex);
-
-          lastColorIndex = newColorIndex;
-
-          return colors[newColorIndex];
+          return getRandomColor(); // Get a random color
         },
       },
       0.1
