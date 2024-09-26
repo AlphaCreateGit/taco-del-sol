@@ -231,7 +231,7 @@ h6,
 .introduce-sec {
   overflow: hidden;
   padding-top: 10px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .introduce__container {
   display: grid;
@@ -325,8 +325,8 @@ h6,
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 134px;
-  height: 134px;
+  width: 157px;
+  height: 154px;
   background-color: var(--color-secondary);
   mask-image: url("../images/img_bg_default.svg");
   mask-size: 100% 100%;
@@ -334,10 +334,11 @@ h6,
   background-size: 100% 100%;
   color: var(--color-fourth);
   transition: all 0.2s ease;
+  overflow: hidden;
 }
 .restaurant__btn a:hover {
-  /* background-image: url("../images/img_bg_hover.svg");
-  mask-image: url("../images/img_bg_hover.svg"); */
+  background-image: url("../images/img_bg_hover.svg");
+  mask-image: url("../images/img_bg_hover.svg");
   background-color: var(--color-secondary);
 }
 .restaurant__btn a span {
