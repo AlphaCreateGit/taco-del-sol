@@ -155,6 +155,12 @@ function magicCursor() {
       left: e.pageX - 10 + "px",
     });
   });
+  $(document).on("mousedown", function () {
+    $(".cursor-magic").addClass("--active");
+    setTimeout(function () {
+      $(".cursor-magic").removeClass("--active");
+    }, 400);
+  });
   $("body a, .dropdown-custom__item,.dropdown-custom__text").mouseenter(
     function () {
       $(".cursor-magic").addClass("--active");
