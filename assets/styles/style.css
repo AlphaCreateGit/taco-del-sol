@@ -403,7 +403,7 @@ h6,
   align-items: center;
   width: 130px;
   height: 66px;
-  background-color: var(--color-secondary);
+
   mask-image: url("../images/img_bg_default.svg");
   mask-size: 100% 100%;
   background-image: url("../images/img_bg_default.svg");
@@ -415,7 +415,6 @@ h6,
 .restaurant__btn a:hover {
   background-image: url("../images/img_bg_hover.svg");
   mask-image: url("../images/img_bg_hover.svg");
-  background-color: var(--color-secondary);
 }
 .restaurant__btn a span {
   transform: translateY(2px);
@@ -637,6 +636,7 @@ h6,
   z-index: 999;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
 }
 .minicart-popup-sumbit button {
   display: flex;
@@ -644,20 +644,18 @@ h6,
   align-items: center;
   width: 130px;
   height: 66px;
-  background-color: var(--color-secondary);
   mask-image: url("../images/img_bg_default.svg");
   mask-size: 100% 100%;
   background-image: url("../images/img_bg_default.svg");
   background-size: 100% 100%;
   color: var(--color-fourth);
-  transition: all 0.2s ease;
+  transition: all 0.2s;
   overflow: hidden;
   padding-top: 5px;
 }
 .minicart-popup-sumbit:hover button {
   background-image: url("../images/img_bg_hover.svg");
   mask-image: url("../images/img_bg_hover.svg");
-  background-color: var(--color-secondary);
 }
 .modal-cart .minicart-popup-wrapper::-webkit-scrollbar {
   display: none;
