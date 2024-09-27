@@ -641,7 +641,7 @@ h6,
 }
 .minicart-popup-body {
   padding: 20px 28px 32px;
-  overflow: scroll;
+  /* overflow: scroll; */
   height: 550px;
 }
 .minicart-popup-wrapper .item-added-to-cart-image img {
