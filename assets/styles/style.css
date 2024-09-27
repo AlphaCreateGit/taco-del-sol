@@ -297,6 +297,7 @@ h6,
   max-width: 700px;
   width: 100%;
 }
+
 .restaurant__desc {
   color: var(--color-fourth);
 }
@@ -304,6 +305,75 @@ h6,
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  padding-block: 300px;
+  overflow: hidden;
+}
+.restaurant__list li {
+  position: absolute;
+  width: 316px;
+  height: 316px;
+}
+.restaurant__list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurant__list li.hover-me img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.restaurant__list li:first-child {
+  left: 85px;
+  top: 100px;
+}
+.restaurant__list li:nth-child(2) {
+  right: 0;
+  top: 0;
+}
+.restaurant__list li:nth-child(3) {
+  left: 0;
+  bottom: 150px;
+}
+.restaurant__list li:nth-child(4) {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.restaurant__list li:nth-child(5) {
+  bottom: 0;
+  left: 20%;
+}
+.restaurant__list li:nth-child(6) {
+  bottom: 0;
+  right: -100px;
+}
+/* .restaurant__list li.hover-me {
+  width: auto;
+  height: auto;
+  animation: hoverMe 1s infinite linear;
+}
+.restaurant__list li.one {
+  top: 100px;
+  left: 30%;
+}
+.restaurant__list li.two {
+  bottom: 100px;
+  right: 25%;
+  transform: rotate(40deg);
+} */
+@keyframes hoverMe {
+  0% {
+    transform: translateY(0px) rotate(40deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(40deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(40deg);
+  }
 }
 
 .restaurant__bottom .text-random h1 {
@@ -325,8 +395,8 @@ h6,
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 157px;
-  height: 154px;
+  width: 130px;
+  height: 66px;
   background-color: var(--color-secondary);
   mask-image: url("../images/img_bg_default.svg");
   mask-size: 100% 100%;
@@ -342,7 +412,7 @@ h6,
   background-color: var(--color-secondary);
 }
 .restaurant__btn a span {
-  transform: translateY(-6px);
+  transform: translateY(2px);
 }
 /* end style restaurant sec */
 
