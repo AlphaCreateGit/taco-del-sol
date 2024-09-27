@@ -325,10 +325,12 @@ h6,
   height: 100%;
   object-fit: cover;
 }
-.restaurant__list li.hover-me img {
+.restaurant__list .hover-me img {
   width: auto;
   height: auto;
   object-fit: contain;
+  transform: translate3d(-100px, 281px, 0px) rotate(-160deg);
+  animation: hoverMe 4s linear infinite;
 }
 .restaurant__list li:first-child {
   left: 85px;
@@ -372,13 +374,13 @@ h6,
 } */
 @keyframes hoverMe {
   0% {
-    transform: translateY(0px) rotate(40deg);
+    transform: translate3d(-100px, 281px, 0px) rotate(-160deg);
   }
   50% {
-    transform: translateY(10px) rotate(40deg);
+    transform: translate3d(-106px, 291px, 0px) rotate(-160deg);
   }
   100% {
-    transform: translateY(0px) rotate(40deg);
+    transform: translate3d(-100px, 281px, 0px) rotate(-160deg);
   }
 }
 
