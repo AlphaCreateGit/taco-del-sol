@@ -626,6 +626,10 @@ h6,
   mask-image: url("../images/bg_modal.png");
   mask-size: 100% 100%;
   overflow-y: scroll;
+  pointer-events: auto;
+}
+.modal-cart .minicart-popup-wrapper::-webkit-scrollbar {
+  display: none;
 }
 .custom-modal .modal-dialog {
   transform: translateX(-86px) !important;
@@ -640,9 +644,12 @@ h6,
   height: 80px;
 }
 .minicart-popup-body {
-  padding: 20px 28px 32px;
-  /* overflow: scroll; */
+  padding: 20px 28px 20px;
   height: 550px;
+  overflow: scroll;
+}
+.minicart-popup-body::-webkit-scrollbar {
+  display: none;
 }
 .minicart-popup-wrapper .item-added-to-cart-image img {
   width: 80px;
