@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery</title>
+    <!-- import favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/taco_logo.svg" />
+    <!-- meta -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Taco Del Sol Website" />
+    <meta property="og:description" content="Taco Del Sol Website" />
+    <!-- <meta property="og:image" content="./assets/images/banner.png" /> -->
+    <!-- meta -->
+    <!-- import boostrap css -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <!-- end boostrap css -->
+    <!-- import lightpick css -->
+    <link rel="stylesheet" href="./assets/libs/lightpick.min.css" />
+    <!-- end lightpick css -->
+    <!-- import css swiper -->
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end css swiper -->
+    <!-- import font -->
+    <link rel="stylesheet" href="./assets/font/unbounded/font.css" />
+    <link rel="stylesheet" href="./assets/font/bringhum/font.css" />
+    <!-- end import font -->
+    <!-- import link custom css page -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <!-- end link custom css page -->
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header position-fixed top-0 start-0 end-0">
+      <div class="container-fluid p-0">
+        <div
+          class="header__container d-flex align-items-center justify-content-between"
+        >
+          <div class="header__left justify-content-start">
+            <div class="header__music">
+              <a href="">
+                <img src="./assets/images/ic_music.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="header__center d-flex align-items-center">
+            <div class="header__menu --left">
+              <ul>
+                <li>
+                  <a href="" class="h3-font">HOME</a>
+                </li>
+                <li>
+                  <a href="" class="h3-font">ABOUT</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__logo">
+              <a href="" class="logo">
+                <img src="./assets/images/logo_full.svg" alt="" />
+              </a>
+            </div>
+            <div class="header__menu --right">
+              <ul>
+                <li>
+                  <a href="" class="h3-font">MENU</a>
+                </li>
+                <li>
+                  <a href="" class="h3-font">OFFERS</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__right d-flex justify-content-end">
+            <div class="header__phone">
+              <a href="tel:+84 789 92 12 12" class="h3-font"
+                >+84 789 92 12 12</a
+              >
+            </div>
+            <div class="header__lang dropdown-custom">
+              <div class="lang__head dropdown-custom__btn">
+                <div
+                  class="value-select dropdown-custom__text h3-font text-center"
+                >
+                  EN
+                </div>
+              </div>
+              <div class="lang__body dropdown-custom__menu">
+                <div
+                  class="dropdown-custom__item lang__item h3-font text-center"
+                >
+                  VI
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- custom cursor-->
+    <div class="cursor-magic"></div>
+    <!-- end cursor-->
+    <!-- start group cta -->
+    <!-- <div class="cta-group position-fixed">
+      <div class="cta__list d-flex align-items-center">
+        <a href="" class="button --book">
+          <span class="h4-font">BOOK A TABLE</span>
+        </a>
+        <a href="" class="button --delivery">
+          <span class="h4-font">DELIVERY</span>
+        </a>
+      </div>
+    </div> -->
+    <!-- end group cta -->
+    <!-- modal cart -->
+    <div class="cta-cart">
+      <button
+        type="button"
+        class="button-cart"
+        data-value="1"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCart"
+      >
+        <img src="./assets/images/icon_cart.svg" alt="" />
+      </button>
+    </div>
+    <div
+      class="modal fade custom-modal"
+      id="modalCart"
+      tabindex="-1"
+      aria-labelledby="modalCartLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-cart">
+          <button type="button" class="btn-close" aria-label="Close">
+            <img src="./assets/images/ic_close_modal.svg" alt="" />
+          </button>
+          <div class="minicart-popup-wrapper">
+            <div class="minicart-popup-body">
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/cake_2.png.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/cake_2.png.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/cake_2.png.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/cake_2.png.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/cake_2.png.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+              <div class="minicart-popup-item">
+                <div class="minicart-popup-content">
+                  <div
+                    class="item-added-to-cart-image"
+                    style="
+                      --bg-add-to-cart: url('../images/img_bg_product_1.png');
+                    "
+                  >
+                    <img src="./assets/images/cake_2.png.png" alt="" />
+                  </div>
+                  <div class="item-added-to-cart-info">
+                    <h4 class="item-added-to-cart-name h4-font">
+                      mushroom pibil
+                    </h4>
+                    <p class="item-added-to-cart-price h4-font">175.000 Đ</p>
+                  </div>
+                </div>
+                <div class="minicart-popup-quanlity">
+                  <span>-</span>
+                  <p>1</p>
+                  <span>+</span>
+                </div>
+              </div>
+            </div>
+            <div class="minicart-popup-footer">
+              <div class="minicart-popup-subtotal">
+                <h3 class="h3-font">subtotal</h3>
+                <p class="price h3-font">660.000 Đ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end modal cart -->
+    <main>
+      <section class="delivery-sec">
+        <div class="container-fluid p-0">
+          <div class="delivery__container">
+            <div class="delivery-category">
+              <div class="title h2-font">TACOS</div>
+              <div class="delivery-list">
+                <div
+                  class="delivery-item"
+                  style="
+                    --color: #feb503;
+                    --bg-img: url('../images/img_bg_product_1.png');
+                  "
+                >
+                  <div class="box">
+                    <div class="box-img">
+                      <div class="img">
+                        <img src="./assets/images/taco_1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="delivery-item"
+                  style="
+                    --color: #feb503;
+                    --bg-img: url('../images/img_bg_product_1.png');
+                  "
+                >
+                  <div class="box">
+                    <div class="box-img">
+                      <div class="img">
+                        <img src="./assets/images/taco_1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="delivery-item"
+                  style="
+                    --color: #feb503;
+                    --bg-img: url('../images/img_bg_product_1.png');
+                  "
+                >
+                  <div class="box">
+                    <div class="box-img">
+                      <div class="img">
+                        <img src="./assets/images/taco_1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="delivery-item"
+                  style="
+                    --color: #feb503;
+                    --bg-img: url('../images/img_bg_product_2.png');
+                  "
+                >
+                  <div class="box">
+                    <div class="box-img">
+                      <div class="img">
+                        <img src="./assets/images/taco_1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="delivery-item"
+                  style="
+                    --color: #feb503;
+                    --bg-img: url('../images/img_bg_product_2.png');
+                  "
+                >
+                  <div class="box">
+                    <div class="box-img">
+                      <div class="img">
+                        <img src="./assets/images/taco_1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="delivery-item"
+                  style="
+                    --color: #feb503;
+                    --bg-img: url('../images/img_bg_product_1.png');
+                  "
+                >
+                  <div class="box">
+                    <div class="box-img">
+                      <div class="img">
+                        <img src="./assets/images/taco_1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="name h4-font">mushroom pibil (2pcs)</div>
+                      <div class="description">
+                        <p class="b2-font">
+                          Shredded mushrooms braised in pibil sauce served with
+                          corn tortilla (Vegan)
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="price h4-font">175.000 đ</div>
+                        <div class="add-to-cart">
+                          <img src="./assets/images/ic_add.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- start footer -->
+    <footer class="footer">
+      <div class="container-fluid p-0">
+        <div class="footer__container">
+          <div class="footer__top"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- end header -->
+    <!-- import jquery -->
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <!-- end jquery -->
+    <!-- import gsap -->
+    <script src="./assets/libs/gsap.min.js"></script>
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/splitType.min.js"></script>
+    <!-- end import gsap -->
+    <!-- import boostrap -->
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <!-- end boostrap -->
+    <!-- import swiper js -->
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <!-- end import swiper js -->
+
+    <!-- import moment js -->
+    <script src="./assets/libs/moment.min.js"></script>
+    <!-- end import moment js -->
+
+    <!-- import lightpick js -->
+    <script src="./assets/libs/lightpick.min.js"></script>
+    <!-- end import lightpick js -->
+    <!-- import custom js -->
+    <script src="./assets/js/script.js"></script>
+    <!-- end import custom js -->
+  </body>
+</html>

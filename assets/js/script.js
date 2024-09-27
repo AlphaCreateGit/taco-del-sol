@@ -162,19 +162,19 @@ function magicCursor() {
     $(".cursor-magic").addClass("--active");
     setTimeout(function () {
       $(".cursor-magic").removeClass("--active");
-    }, 400);
+    }, 700);
   });
-  $("body a, .dropdown-custom__item,.dropdown-custom__text").mouseenter(
-    function () {
-      $(".cursor-magic").addClass("--active");
-    }
-  );
+  $(
+    "body a, .dropdown-custom__item,.dropdown-custom__text,.add-to-cart"
+  ).mouseenter(function () {
+    $(".cursor-magic").addClass("--active");
+  });
 
-  $("body a,.dropdown-custom__item,.dropdown-custom__text").mouseleave(
-    function () {
-      $(".cursor-magic").removeClass("--active");
-    }
-  );
+  $(
+    "body a,.dropdown-custom__item,.dropdown-custom__text,.add-to-cart"
+  ).mouseleave(function () {
+    $(".cursor-magic").removeClass("--active");
+  });
 }
 function eventSwiper() {
   if ($(".events-sec").length) {
