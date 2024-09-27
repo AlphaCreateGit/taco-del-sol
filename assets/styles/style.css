@@ -676,6 +676,9 @@ h6,
 .minicart-popup-footer {
   padding: 26px 28px 32px;
   border-top: 1px solid var(--color-fourth);
+  position: sticky;
+  bottom: 0;
+  background-color: var(--color-white);
 }
 .minicart-popup-footer .minicart-popup-subtotal {
   display: flex;
