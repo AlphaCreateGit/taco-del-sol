@@ -6,6 +6,9 @@ $(document).ready(function () {
   animationText();
   magicCursor();
   eventSwiper();
+  $(".minicart-popup-item").on("click", function () {
+    console.log("111");
+  });
 });
 
 function header() {
