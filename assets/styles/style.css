@@ -725,3 +725,39 @@ h6,
   align-items: center;
 }
 /* end modal cart */
+/* css footer */
+.footer__container {
+  padding-inline: 60px;
+}
+.footer__top {
+  display: flex;
+  background-color: var(--color-secondary);
+  mask-image: url("../images/img_bg_footer.png");
+  mask-size: 100% 100%;
+  padding-top: 40px;
+}
+.footer_chair {
+  width: 225px;
+  height: 396px;
+  position: relative;
+}
+.footer_chair .box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50px);
+}
+.footer_chair .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer__content {
+  width: calc(100% - 252px);
+}
+.footer__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* end css footer */
