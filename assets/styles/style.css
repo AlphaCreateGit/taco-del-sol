@@ -762,13 +762,13 @@ h6,
 }
 @keyframes chair_spin {
   0% {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
   }
   50% {
-    transform: rotate(5deg);
+    transform: rotate(1deg);
   }
   100% {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
   }
 }
 .footer__content {
