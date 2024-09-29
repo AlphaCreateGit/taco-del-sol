@@ -109,6 +109,11 @@ h6,
   font-size: 14px;
   line-height: 20px;
 }
+.b3-font {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  line-height: 20px;
+}
 .spacing {
   height: 120px;
 }
@@ -731,13 +736,12 @@ h6,
 }
 .footer__top {
   display: flex;
-  background-color: var(--color-secondary);
-  mask-image: url("../images/img_bg_footer.png");
-  mask-size: 100% 100%;
+  background-image: url("../images/img_bg_footer.png");
+  background-size: 100% 100%;
   padding-top: 40px;
 }
 .footer_chair {
-  width: 225px;
+  width: 328px;
   height: 396px;
   position: relative;
 }
@@ -745,19 +749,94 @@ h6,
   position: absolute;
   width: 100%;
   height: 100%;
-  transform: translateX(-50px);
+  transform: translate(-55px, 30px);
 }
+
 .footer_chair .box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+.footer_chair .box img:hover {
+  animation: chair_spin 1s infinite linear;
+}
+@keyframes chair_spin {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
 .footer__content {
   width: calc(100% - 252px);
 }
 .footer__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.footer__item.--address h3,
+.footer__item.--social h3 {
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+.footer__item.--map h3 {
+  color: var(--color-primary);
+  margin-bottom: 18px;
+}
+.footer__item.--address p {
+  color: var(--color-white);
+}
+.footer__item.--time ul li {
+  color: var(--color-white);
+}
+.footer__item.--time h3 {
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+.footer__item.--call h3 {
+  color: #45fb4b;
+  margin-bottom: 24px;
+}
+.footer__item.--call a {
+  color: var(--color-white);
+}
+.footer__item.--parking h3 {
+  color: #9cdbf1;
+}
+.footer__item.--social ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer__item.--parking {
+  position: relative;
+}
+.footer__item.--parking .img {
+  position: absolute;
+  top: -30px;
+}
+.foooter__bottom {
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
+  padding: 24px 40px;
+}
+.foooter__bottom .page ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.foooter__bottom .page ul li a {
+  color: var(--color-fourth);
+}
+.foooter__bottom .author {
+  text-align: right;
+}
+.foooter__bottom .author a {
+  color: var(--color-fourth);
 }
 /* end css footer */
