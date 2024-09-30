@@ -783,9 +783,20 @@ input[type="number"] {
   padding-top: 40px;
 }
 .footer_chair {
-  width: 328px;
+  width: 252px;
   height: 396px;
   position: relative;
+}
+.footer_chair .text {
+  position: absolute;
+  right: 60px;
+  top: 130px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #c4eda6;
+  max-width: 100px;
+  text-align: center;
+  transform: rotate(27deg);
 }
 .footer_chair .box {
   position: absolute;
@@ -799,8 +810,22 @@ input[type="number"] {
   height: 100%;
   object-fit: cover;
 }
-.footer_chair .box img:hover {
+.footer_chair:hover .text {
+  animation: chair_text 1s infinite linear;
+}
+.footer_chair:hover img {
   animation: chair_spin 1s infinite linear;
+}
+@keyframes chair_text {
+  0% {
+    transform: translateY(0) rotate(27deg) scale(1);
+  }
+  50% {
+    transform: translateY(5px) rotate(27deg) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) rotate(27deg) scale(1);
+  }
 }
 @keyframes chair_spin {
   0% {
