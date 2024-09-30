@@ -530,29 +530,51 @@ h6,
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   width: 100%;
-  background-image: var(--bg-img);
+  background-color: var(--color-white);
 }
 .delivery__container .delivery-category .delivery-list .delivery-item .box-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 28px;
+  padding-top: 22px;
+  padding-bottom: 12px;
+  background-image: var(--bg-img);
+  background-size: 100% 100%;
 }
 .delivery__container .delivery-category .delivery-list .delivery-item .img {
   width: 144px;
   aspect-ratio: 1;
+  position: relative;
 }
 .delivery__container .delivery-category .delivery-list .delivery-item .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  z-index: 2;
+}
+.delivery__container
+  .delivery-category
+  .delivery-list
+  .delivery-item
+  .img::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 50%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .delivery__container
   .delivery-category
   .delivery-list
   .delivery-item
   .box-content {
-  padding: 4px 24px 24px;
+  padding: 28px 24px 24px;
 }
 .delivery__container
   .delivery-category
@@ -671,7 +693,7 @@ h6,
   transform: translateX(-86px) !important;
 }
 .custom-modal {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .minicart-popup-wrapper .item-added-to-cart-image {
   background-image: var(--bg-add-to-cart);
@@ -840,3 +862,157 @@ h6,
   color: var(--color-fourth);
 }
 /* end css footer */
+
+/* css page cart */
+.cart-sec {
+  padding-top: 160px;
+}
+.cart-billing .group-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.cart-billing h3,
+.cart-order-summary h3 {
+  margin-bottom: 20px;
+}
+.cart-billing .group-form .name,
+.cart-billing .group-form .phone {
+  width: 100%;
+}
+.cart-billing .address {
+  margin-bottom: 16px;
+}
+.cart-billing .form-control {
+  background-color: transparent;
+  background-image: url("../images/input_border.png");
+  background-size: 100% 100%;
+  border: none;
+  padding: 12px 16px;
+}
+.cart-billing .form-control:focus {
+  box-shadow: none;
+}
+.cart-billing .address .form-control {
+  background-image: url("../images/input_border_full.png");
+}
+.cart-billing .note textarea {
+  background-image: url("../images/textarea_border.png");
+  background-size: 100% 100%;
+  border: none;
+  width: 100%;
+  padding: 28px 16px;
+}
+.cart-billing .note {
+  margin-bottom: 20px;
+}
+.cart-billing .cart-form {
+  padding-right: 40px;
+}
+.cart-billing .cart-form input {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-fourth);
+}
+.cart-billing .cart-form input::placeholder,
+.cart-billing .cart-form textarea::placeholder {
+  color: var(--color-fourth);
+}
+.cart-billing .cart-form textarea {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-fourth);
+  resize: none;
+}
+.cart-billing .form-note {
+  padding-left: 16px;
+  margin-bottom: 12px;
+}
+#thanksModal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#thanksModal .btn-close {
+  background-image: none;
+  width: 46px;
+  height: 46px;
+  opacity: 1;
+  padding-right: 24px;
+  padding-top: 16px;
+}
+#thanksModal .btn-close:focus {
+  box-shadow: none;
+}
+#thanksModal .btn-close:hover {
+  cursor: none;
+}
+#thanksModal .modal-header {
+  position: relative;
+  border: none;
+}
+#thanksModal .modal-footer {
+  border: none;
+}
+#thanksModal .modal-header .art-work {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  transform: translateY(-50px);
+}
+#thanksModal .modal-content {
+  background-image: url("../images/bg_thanks.png");
+  background-color: transparent;
+  background-size: 100% 100%;
+  border: none;
+}
+#thanksModal .modal-body {
+  text-align: center;
+}
+#thanksModal .modal-body .box h3 {
+  font-family: var(--font-primary);
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-third);
+  transform: rotate(-8deg);
+  margin-bottom: 8px;
+}
+#thanksModal .modal-body .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#thanksModal .modal-body .box .content {
+  max-width: 345px;
+}
+#thanksModal .modal-body .box .content p {
+  color: var(--color-fourth);
+}
+#thanksModal .modal-footer {
+  justify-content: center;
+  margin-top: -32px;
+}
+#thanksModal .modal-footer button {
+  transform: translateY(40px);
+}
+#modalBookTable .modal-header {
+  position: relative;
+}
+#modalBookTable .btn-close {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: none;
+  width: 70px;
+  height: 70px;
+  opacity: 1;
+  transform: translateX(-100%);
+}
+#modalBookTable .btn-close:hover {
+  cursor: none;
+}
+/* end css page cart */
