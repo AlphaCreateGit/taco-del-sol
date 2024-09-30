@@ -1015,4 +1015,14 @@ h6,
 #modalBookTable .btn-close:hover {
   cursor: none;
 }
+#modalBookTable .modal-content {
+  background-image: url("../images/bg_modal.png");
+  background-color: transparent;
+  border: none;
+  background-size: 100% 100%;
+}
+#modalBookTable .modal-header,
+#modalBookTable .modal-footer {
+  border: none;
+}
 /* end css page cart */
