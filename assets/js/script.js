@@ -1,14 +1,11 @@
 // A $( document ).ready() block.
 $(document).ready(function () {
-  console.log("ready!");
   language();
   header();
   animationText();
   magicCursor();
   eventSwiper();
-  $(".minicart-popup-item").on("click", function () {
-    console.log("111");
-  });
+  bookTable();
 });
 
 function header() {
@@ -153,7 +150,15 @@ function animationText() {
     );
   });
 }
-
+function bookTable() {
+  if ($(".book-table").length) {
+    var picker = new Lightpick({
+      field: document.getElementById("selectDate"),
+      minDate: moment().startOf("day"),
+      // numberOfMonths: 1,
+    });
+  }
+}
 function magicCursor() {
   $(document).on("mousemove", function (e) {
     $(".cursor-magic").css({

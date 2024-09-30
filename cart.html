@@ -139,16 +139,90 @@
               <img src="./assets/images/ic_close_modal.svg" alt="" />
             </button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <div class="book-table">
+              <div class="group-form">
+                <div class="date">
+                  <input
+                    type="text"
+                    id="selectDate"
+                    autocomplete="off"
+                    placeholder="Select a date*"
+                    class="form-control"
+                  />
+                </div>
+                <div class="time form-control">
+                  <div class="dropdown-custom">
+                    <div
+                      class="select-head dropdown-custom__btn d-flex align-items-center justify-content-between"
+                    >
+                      <p class="b2-font dropdown-custom__text">Select time*</p>
+                      <img src="./assets/images/ic_arrows.svg" alt="" />
+                    </div>
+                    <div class="dropdown-custom__menu">
+                      <div class="dropdown-custom__item b2-font">
+                        11.30 am - 3 pm
+                      </div>
+                      <div class="dropdown-custom__item b2-font">
+                        5.30 pm - 11 pm
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group-form">
+                <div class="adult">
+                  <input
+                    type="number"
+                    placeholder="Adult"
+                    class="form-control"
+                  />
+                </div>
+                <div class="children">
+                  <input
+                    type="number"
+                    placeholder="Children"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="name">
+                <input
+                  type="text"
+                  placeholder="Full name*"
+                  class="form-control"
+                />
+              </div>
+              <div class="phone">
+                <input
+                  placeholder="Your phone number*"
+                  class="form-control"
+                  type="number"
+                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                />
+              </div>
+              <div class="email">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="form-control"
+                />
+              </div>
+              <div class="remarks">
+                <textarea
+                  rows="7"
+                  cols="50"
+                  placeholder="Dietary, allergies or other remarks?"
+                ></textarea>
+              </div>
+            </div>
+          </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
+            <button class="restaurant__btn button-modal-back" type="button">
+              <a href="javascript:void(0);" class="h4-font">
+                <span class="h4-font">BOOK A TABLE</span>
+              </a>
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -218,9 +292,10 @@
                       </div>
                       <div class="phone">
                         <input
-                          type="text"
                           class="form-control"
                           placeholder="Phone number*"
+                          type="number"
+                          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                         />
                       </div>
                     </div>

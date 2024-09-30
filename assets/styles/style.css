@@ -78,6 +78,17 @@ h6,
 .h6 {
   margin: 0;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 /* set minxin */
 .h1-font {
   font-family: var(--font-primary);
@@ -125,10 +136,9 @@ h6,
 }
 .header__container {
   padding-inline: 24px;
-  background-color: var(--color-white);
   height: 80px;
-  mask-image: url("../images/header.png");
-  mask-size: 100% 100%;
+  background-image: url("../images/bg_header.png");
+  background-size: 100% 100%;
 }
 .header__left,
 .header__right {
@@ -199,6 +209,11 @@ h6,
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  mask-image: url("../images/bg_button.svg");
+  transition: background-color 0.4s ease;
+}
+.cta-group .cta__list .button:hover {
+  background-color: var(--color-third);
 }
 .cta-group .cta__list .button span {
   color: var(--color-white);
@@ -218,7 +233,7 @@ h6,
   border-radius: 50%;
   background: transparent;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 100000;
   background-image: url("../images/ic_hand_default.svg");
   background-size: 100% 100%;
   transition: background-image 0.2s;
@@ -1024,5 +1039,165 @@ h6,
 #modalBookTable .modal-header,
 #modalBookTable .modal-footer {
   border: none;
+}
+#modalBookTable .time {
+  position: relative;
+}
+#modalBookTable .time .dropdown-custom__menu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  background-image: url("../images/v3.png");
+  background-size: 100% 100%;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  transform: translateY(100%);
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+}
+#modalBookTable .time .dropdown-custom__menu .dropdown-custom__item {
+  margin-bottom: 16px;
+}
+#modalBookTable .time .dropdown-custom__menu .dropdown-custom__item:last-child {
+  margin-bottom: 0;
+}
+#modalBookTable .time .dropdown-custom__menu.dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+#modalBookTable .book-table .group-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+#modalBookTable .book-table .group-form .date {
+  width: 100%;
+}
+#modalBookTable .book-table .form-control {
+  padding: 12px 16px;
+  background-image: url("../images/input_border.png");
+  background-size: 100% 100%;
+  border: none;
+}
+#modalBookTable .book-table .form-control:focus {
+  box-shadow: none;
+}
+#modalBookTable .book-table input,
+#modalBookTable .book-table input::placeholder {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-fourth);
+}
+#modalBookTable .book-table .name .form-control,
+#modalBookTable .book-table .phone .form-control,
+#modalBookTable .book-table .email .form-control {
+  background-image: url("../images/input_border_full.png");
+  margin-bottom: 16px;
+  background-color: #f9f9f9;
+}
+#modalBookTable .modal-body {
+  padding-inline: 28px;
+}
+#modalBookTable .remarks textarea {
+  background-image: url("../images/textarea_border.png");
+  background-size: 100% 100%;
+  border: none;
+  width: 100%;
+  padding: 28px 16px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-fourth);
+  resize: none;
+}
+#modalBookTable .remarks textarea::placeholder {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-fourth);
+}
+#modalBookTable .modal-footer {
+  justify-content: center;
+  margin-top: -32px;
+}
+#modalBookTable .modal-footer button {
+  transform: translateY(40px);
+}
+.lightpick__inner,
+.lightpick {
+  background-color: #f9f9f9;
+  box-shadow: none;
+  padding: 0;
+}
+.lightpick {
+  padding-top: 16px;
+}
+.lightpick * {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  line-height: 20px;
+}
+.lightpick__months {
+  background-color: #f9f9f9;
+  border: none;
+}
+.lightpick__month {
+  box-shadow: none;
+  border: 6px solid black;
+  background-color: transparent;
+  padding: 12px 16px;
+  border-image-source: url("../images/img_calender.png");
+  border-image-slice: 24;
+}
+.lightpick__close-action,
+.lightpick__next-action,
+.lightpick__previous-action {
+  font-size: 0;
+  background-image: url("../images/ic_arrows.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.lightpick__close-action:hover,
+.lightpick__next-action:hover,
+.lightpick__previous-action:hover {
+  cursor: none;
+}
+.lightpick__next-action {
+  transform: rotate(-90deg);
+}
+.lightpick__previous-action {
+  transform: rotate(90deg);
+}
+.lightpick__day.is-end-date,
+.lightpick__day.is-end-date:hover,
+.lightpick__day.is-start-date,
+.lightpick__day.is-start-date:hover {
+  background-image: none;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+.lightpick__day {
+  aspect-ratio: 1;
+}
+.lightpick__days {
+  gap: 2px;
+}
+.lightpick__month {
+  width: 332px;
+}
+.lightpick__day.is-next-month {
+  opacity: 1;
+}
+.lightpick__day.is-today {
+  background-image: none;
+}
+.lightpick__month-title-bar {
+  margin-bottom: 16px;
 }
 /* end css page cart */
