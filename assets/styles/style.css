@@ -885,7 +885,7 @@ input[type="number"] {
 }
 .footer__item.--parking .img {
   position: absolute;
-  top: -30px;
+  top: 0px;
 }
 .foooter__bottom {
   display: grid;
