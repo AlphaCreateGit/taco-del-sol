@@ -1372,3 +1372,69 @@ input[type="number"] {
   top: 0;
 }
 /* end page offer detail */
+/* css page about */
+.about-banner__container {
+  height: 100vh;
+  width: 100%;
+}
+.about-banner__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-sec-title {
+  margin-bottom: 80px;
+}
+.about-sec-title .title {
+  text-align: center;
+}
+.about-sec-title .title h1 {
+  font-size: 100px;
+  line-height: 100px;
+}
+
+.about-item-img .image {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 455 / 478;
+}
+.about-item-img .image::before {
+  background-image: var(--bg-image);
+  background-size: 100% 100%;
+  position: absolute;
+  inset: -40px -20px -10px;
+  content: "";
+}
+.about-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: url("../images/bg_about.png");
+  mask-size: 100% 100%;
+}
+.about-sec-list .content h1 {
+  margin-bottom: 40px;
+}
+.about-sec-list .content .desc p {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: var(--font-secondary);
+  color: var(--color-fourth);
+  margin-bottom: 24px;
+}
+.about-sec-list .content .desc p:last-child {
+  margin-bottom: 0;
+}
+.about-sec-list .container-fluid .row:nth-child(even) {
+  padding-top: 360px;
+  padding-bottom: 120px;
+}
+.about-sec-list .container-fluid .row:nth-child(even) .about-item-img img {
+  mask-image: url("../images/bg_about_2.png");
+}
+.about-sec-list .container-fluid .row:nth-child(even) .about-item-img .image {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 547 / 478;
+}
+/* end page about */
