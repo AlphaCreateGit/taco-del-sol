@@ -887,6 +887,41 @@ input[type="number"] {
   position: absolute;
   top: 0px;
 }
+.footer__item.--parking .img:hover {
+  animation: moto_spin 1s infinite linear;
+}
+@keyframes moto_spin {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+.footer__item.--parking .text {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  background-image: url("../images/box_car.png");
+  height: 80px;
+  background-size: 100% 100%;
+  width: 111px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.footer__item.--parking .text span {
+  font-size: 12px;
+  font-family: var(--font-secondary);
+  color: var(--color-white);
+  width: 70px;
+  display: block;
+  transform: rotate(-7.62deg);
+}
 .foooter__bottom {
   display: grid;
   grid-template-columns: 3fr 4fr 3fr;
