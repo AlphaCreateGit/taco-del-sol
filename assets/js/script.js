@@ -6,6 +6,7 @@ $(document).ready(function () {
   magicCursor();
   eventSwiper();
   bookTable();
+  offerSwiper();
 });
 
 function header() {
@@ -189,9 +190,23 @@ function eventSwiper() {
     const swiperOffer = new Swiper(".swiper-event", {
       slidesPerView: 4,
       spaceBetween: 24,
+      loop: true,
       navigation: {
         nextEl: ".events-sec .swiper-button-next",
         prevEl: ".events-sec .swiper-button-prev",
+      },
+    });
+  }
+}
+function offerSwiper() {
+  if ($(".offers-sec").length) {
+    const swiperOffer = new Swiper(".swiper-offer", {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      loop: true,
+      navigation: {
+        nextEl: ".offers-sec .swiper-button-next",
+        prevEl: ".offers-sec .swiper-button-prev",
       },
     });
   }
