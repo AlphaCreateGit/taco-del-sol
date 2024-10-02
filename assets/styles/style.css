@@ -415,29 +415,23 @@ input[type="number"] {
 
 @keyframes hoverMe {
   0% {
-    /* transform: translate3d(-100px, 281px, 0px) rotate(-160deg); */
     transform: translate3d(130px, -75px, 0px) rotate(42deg);
   }
   50% {
-    /* transform: translate3d(-106px, 291px, 0px) rotate(-160deg); */
     transform: translate3d(124px, -65px, 0px) rotate(42deg);
   }
   100% {
-    /* transform: translate3d(-100px, 281px, 0px) rotate(-160deg); */
     transform: translate3d(130px, -75px, 0px) rotate(42deg);
   }
 }
 @keyframes hoverMe2 {
   0% {
-    /* transform: translate3d(-100px, 281px, 0px) rotate(-160deg); */
     transform: translate3d(-100px, 0px, 0px) rotate(42deg);
   }
   50% {
-    /* transform: translate3d(-106px, 291px, 0px) rotate(-160deg); */
     transform: translate3d(-97px, -10px, 0px) rotate(42deg);
   }
   100% {
-    /* transform: translate3d(-100px, 281px, 0px) rotate(-160deg); */
     transform: translate3d(-100px, 0px, 0px) rotate(42deg);
   }
 }
