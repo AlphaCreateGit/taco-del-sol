@@ -7,7 +7,33 @@ $(document).ready(function () {
   eventSwiper();
   bookTable();
   offerSwiper();
+  intro();
 });
+function intro() {
+  const $intro = $(".intro");
+  const tl = gsap.timeline();
+
+  tl.to($intro.find(".intro-inner"), {
+    autoAlpha: 0,
+    duration: 2.8, // Adjusted to fit the 4s total duration
+    ease: "expo.inOut",
+  })
+    .to(
+      $intro,
+      {
+        duration: 3.2, // Reduced slightly to fit within the timeline
+        opacity: 0,
+        // scaleY: 0,
+        // transformOrigin: "center center",
+        ease: "expo.inOut",
+      },
+      0.8 // Delay remains at 0.8s
+    )
+    .to($intro, {
+      autoAlpha: 0,
+      duration: 0,
+    });
+}
 
 function header() {
   let height = $(".header__container").height() * -1;

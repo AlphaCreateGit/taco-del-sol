@@ -31,6 +31,11 @@
     <!-- end link custom css page -->
   </head>
   <body>
+    <div
+      class="intro position-fixed d-flex align-items-center justify-content-center"
+    >
+      <div class="intro-inner"></div>
+    </div>
     <!-- start header -->
     <header class="header position-fixed top-0 start-0 end-0">
       <div class="container-fluid p-0">
@@ -117,7 +122,14 @@
       <section class="hero-banner">
         <div class="container-fluid p-0">
           <div class="hero-banner__container">
-            <img src="./assets/images/img_banner.png" alt="" />
+            <!-- video or image -->
+            <!-- <img src="./assets/images/img_banner.png" alt="" /> -->
+            <video autoplay muted>
+              <source
+                src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </section>
