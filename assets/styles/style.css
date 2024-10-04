@@ -635,7 +635,7 @@ input[type="number"] {
 .delivery__container .delivery-category .delivery-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 100px 20px;
 }
 .delivery__container .delivery-category .delivery-list .delivery-item {
   width: 100%;
@@ -862,6 +862,8 @@ input[type="number"] {
 /* css footer */
 .footer__container {
   padding-inline: 60px;
+  padding-top: 64px;
+  background-color: #25bcc0;
 }
 .footer__top {
   display: flex;
