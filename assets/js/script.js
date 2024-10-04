@@ -1,11 +1,12 @@
 // A $( document ).ready() block.
 $(document).ready(function () {
-  intro();
-  language();
-  header();
-  animationText();
-  magicCursor();
-  bookTable();
+  intro(function () {
+    language();
+    header();
+    animationText();
+    magicCursor();
+    bookTable();
+  });
 });
 function intro(callback) {
   const $intro = $(".intro");
