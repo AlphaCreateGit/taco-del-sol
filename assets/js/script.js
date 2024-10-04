@@ -1,37 +1,36 @@
 // A $( document ).ready() block.
 $(document).ready(function () {
+  magicCursor();
   intro(function () {
     language();
     header();
     animationText();
-    magicCursor();
     bookTable();
   });
 });
 function intro(callback) {
   const $intro = $(".intro");
   $("body").addClass("overflow-hidden");
-  const tl = gsap.timeline({
-    onComplete: () => {
-      $("body").removeClass("overflow-hidden");
-      callback();
-    },
-  });
+  setTimeout(function () {
+    $("body").removeClass("overflow-hidden");
+  }, 3000);
+
+  const tl = gsap.timeline();
 
   tl.to($intro.find(".intro-inner"), {
     autoAlpha: 0,
-    duration: 2.5, // Increased from 1.3s to 2.5s
+    duration: 4, // Increased from 1.3s to 2.5s
     ease: "expo.inOut",
   })
     .to(
       $intro,
       {
-        duration: 4,
-        scaleY: 0,
-        transformOrigin: "center top",
+        duration: 2.5,
+        opacity: 0,
+
         ease: "expo.inOut",
       },
-      0.8
+      2
     )
     .to($intro, {
       autoAlpha: 0,
