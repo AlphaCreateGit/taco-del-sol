@@ -9,37 +9,39 @@ $(document).ready(function () {
   });
 });
 function intro(callback) {
-  const $intro = $(".intro");
-  $("body").addClass("overflow-hidden");
-  setTimeout(function () {
-    $("body").removeClass("overflow-hidden");
-  }, 3000);
+  if ($(".intro").length) {
+    const $intro = $(".intro");
+    $("body").addClass("overflow-hidden");
+    setTimeout(function () {
+      $("body").removeClass("overflow-hidden");
+    }, 3000);
 
-  const tl = gsap.timeline({
-    onComplete: () => {
-      callback();
-    },
-  });
-
-  tl.to($intro.find(".intro-inner"), {
-    autoAlpha: 0,
-    duration: 4, // Increased from 1.3s to 2.5s
-    ease: "expo.inOut",
-  })
-    .to(
-      $intro,
-      {
-        duration: 2.5,
-        opacity: 0,
-
-        ease: "expo.inOut",
+    const tl = gsap.timeline({
+      onComplete: () => {
+        callback();
       },
-      2
-    )
-    .to($intro, {
-      autoAlpha: 0,
-      duration: 0,
     });
+
+    tl.to($intro.find(".intro-inner"), {
+      autoAlpha: 0,
+      duration: 4, // Increased from 1.3s to 2.5s
+      ease: "expo.inOut",
+    })
+      .to(
+        $intro,
+        {
+          duration: 2.5,
+          opacity: 0,
+
+          ease: "expo.inOut",
+        },
+        2
+      )
+      .to($intro, {
+        autoAlpha: 0,
+        duration: 0,
+      });
+  }
 }
 
 function header() {
