@@ -155,19 +155,19 @@ input[type="number"] {
 }
 
 .intro-inner img:nth-child(1) {
-  animation-delay: 0s; /* Ảnh đầu tiên không có độ trễ */
+  animation-delay: 0s;
 }
 
 .intro-inner img:nth-child(2) {
-  animation-delay: 1s; /* Ảnh thứ 2 có độ trễ 2s */
+  animation-delay: 0.5;
 }
 
 .intro-inner img:nth-child(3) {
-  animation-delay: 1.5s; /* Ảnh thứ 3 có độ trễ 4s */
+  animation-delay: 1s;
 }
 
 .intro-inner img:nth-child(4) {
-  animation-delay: 2s; /* Ảnh thứ 4 có độ trễ 6s */
+  animation-delay: 1.5s;
 }
 @keyframes fadeEffect {
   0% {
