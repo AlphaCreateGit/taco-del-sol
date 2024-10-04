@@ -12,8 +12,12 @@ $(document).ready(function () {
 function intro() {
   const $intro = $(".intro");
   const tl = gsap.timeline({
-    onStart: () => {},
-    onComplete: () => {},
+    onStart: () => {
+      $("body").addClass("overflow-hidden");
+    },
+    onComplete: () => {
+      $("body").removeClass("overflow-hidden");
+    },
   });
 
   tl.to($intro.find(".intro-inner"), {
@@ -24,13 +28,11 @@ function intro() {
     .to(
       $intro,
       {
-        duration: 6, // Reduced slightly to fit within the timeline
+        duration: 6,
         opacity: 0,
-        // scaleY: 0,
-        // transformOrigin: "center center",
         ease: "expo.inOut",
       },
-      1 // Delay remains at 0.8s
+      1
     )
     .to($intro, {
       autoAlpha: 0,
