@@ -138,8 +138,9 @@ input[type="number"] {
 .intro {
   z-index: 9999;
   inset: 0;
+  background-color: red;
 }
-.intro-inner {
+/* .intro-inner {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -168,7 +169,7 @@ input[type="number"] {
 
 .intro-inner img:nth-child(4) {
   animation-delay: 1.5s;
-}
+} */
 @keyframes fadeEffect {
   0% {
     opacity: 0;

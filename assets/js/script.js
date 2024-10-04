@@ -20,9 +20,23 @@ function intro(callback) {
 
   tl.to($intro.find(".intro-inner"), {
     autoAlpha: 0,
-    duration: 4,
+    duration: 2.5, // Increased from 1.3s to 2.5s
     ease: "expo.inOut",
-  });
+  })
+    .to(
+      $intro,
+      {
+        duration: 4,
+        scaleY: 0,
+        transformOrigin: "center top",
+        ease: "expo.inOut",
+      },
+      0.8
+    )
+    .to($intro, {
+      autoAlpha: 0,
+      duration: 0,
+    });
 }
 
 function header() {
