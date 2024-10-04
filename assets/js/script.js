@@ -4,21 +4,12 @@ $(document).ready(function () {
   header();
   animationText();
   magicCursor();
-  // eventSwiper();
   bookTable();
-  // offerSwiper();
   intro();
 });
 function intro() {
   const $intro = $(".intro");
-  const tl = gsap.timeline({
-    onStart: () => {
-      $("body").addClass("overflow-hidden");
-    },
-    onComplete: () => {
-      $("body").removeClass("overflow-hidden");
-    },
-  });
+  const tl = gsap.timeline();
 
   tl.to($intro.find(".intro-inner"), {
     autoAlpha: 0,
@@ -51,7 +42,7 @@ function header() {
         y: height,
         paused: true,
         duration: 0.5,
-        ease: "power4.out",
+        ease: "none",
         trigger: "header",
       })
       .progress(1);
