@@ -15,7 +15,11 @@ function intro(callback) {
     $("body").removeClass("overflow-hidden");
   }, 3000);
 
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({
+    onComplete: () => {
+      callback();
+    },
+  });
 
   tl.to($intro.find(".intro-inner"), {
     autoAlpha: 0,
@@ -40,7 +44,7 @@ function intro(callback) {
 
 function header() {
   let height = $(".header__container").height() * -1;
-  console.log(height);
+
   let navTop;
 
   function initializeScrollTrigger() {
